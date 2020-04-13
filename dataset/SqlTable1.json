@@ -1,0 +1,51 @@
+{
+	"name": "SqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkServiceSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "PathToCategory",
+				"type": "varchar"
+			},
+			{
+				"name": "CategoryName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Level",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Kategória",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Page",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "Kratky popis kategorie",
+				"type": "ntext"
+			},
+			{
+				"name": "BannerImage",
+				"type": "image"
+			},
+			{
+				"name": "Popis produktu Parent",
+				"type": "ntext"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CatalogSection1t"
+		}
+	}
+}
