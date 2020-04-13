@@ -18,11 +18,32 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
+						"sqlReaderStoredProcedureName": "[dbo].[CatalogSection1]",
+						"storedProcedureParameters": {
+							"Language": {
+								"type": "Int32",
+								"value": "2"
+							},
+							"Scope": {
+								"type": "Int32",
+								"value": "2205"
+							}
+						},
 						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"tableOption": "autoCreate"
 					},
 					"enableStaging": false
 				},
 				"inputs": [
+					{
+						"referenceName": "SqlTable1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
 					{
 						"referenceName": "SqlTable1",
 						"type": "DatasetReference"
